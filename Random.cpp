@@ -11,13 +11,16 @@ int main(){
     const int b = 1366;
     const int c = 1283;
     const int m = 6075;
-    int a, safe;
+    int a, safe, i;
     cin >> a;
     safe = a;
+    i = 0;
     do{
-        cout << random(a,b,c,m) << endl;
+        i++;
+        cout << (a = random(a,b,c,m)) << endl;
     }
     while(a != safe);
-
+    cout << "Counter of the cycle = " << i << endl;
+    system("pause");
     return 0;
 }
